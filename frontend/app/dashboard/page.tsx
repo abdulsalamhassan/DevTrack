@@ -68,7 +68,7 @@ export default function DashboardPage() {
             {projectsQuery.isSuccess && (
                 <>
                     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                        <MetricCard label="Total Projects" value={projectsQuery.data.projects.length} tone="neutral" />
+                        <MetricCard label="Total Projects" value={projectsQuery.data?.projects?.length ?? 0} tone="neutral" />
                         <MetricCard
                             label="Projects In Progress"
                             value={metricsQuery.data?.projectsInProgress ?? 0}
